@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="StoreController as store">
+    <div class="container-fluid" ng-repeat='product in store.products'>
+        <h2>Product: {{product.name}}</h2>
+        <h3>Price: {{product.price | currency}}</h3>
+        <!-- Gallery for images -->
+        <div class="gallery" ng-show='product.images.length'> <!-- show if the product have images -->
+            <div class="firstImage">
+                <img ng-src="{{product.images[0]}}" alt="image"/>
+            </div>
+            <div>
+                <h2>All images for product</h2>
+                <div ng-repeat='image in product.images' class="allImages">
+                    <img ng-src="{{image}}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

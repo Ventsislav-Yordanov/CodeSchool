@@ -1,0 +1,16 @@
+ul {
+    padding: 10px 0;
+}
+
+h4, h3, h2 {
+    margin: 5px 0;
+}
+
+.allImages {
+    display: inline-block;
+    margin: 10px 5px 10px 0;
+}
+
+.firstImage {
+    margin-bottom: 15px;
+}

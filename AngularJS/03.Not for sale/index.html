@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <style>
+        .product {
+            border: 1px solid black;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        p {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="container" ng-controller="StoreController as store">
+<div class="product" ng-repeat='product in store.products' ng-hide='product.soldOut'>
+    <p>Name: {{product.name}}</p>
+    <p>Price: {{product.price | currency }}</p> <!-- Filter currency-->
+    <p>canPurchase: {{product.canPurchase}}</p>
+    <button ng-show='store.product.canPurchase'>Add to Cart</button>
+</div>
+</body>
+</html>
