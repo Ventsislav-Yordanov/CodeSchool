@@ -1,4 +1,4 @@
-CodeSchool
+CodeSchool courses
 ==========
 
-More info - http://campus.codeschool.com/courses/shaping-up-with-angular-js/
+* AngularJS - http://campus.codeschool.com/courses/shaping-up-with-angular-js/
